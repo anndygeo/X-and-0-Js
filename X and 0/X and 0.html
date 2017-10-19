@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript" src="X and 0.js"></script>
+    <style media="screen">
+      table, th, td {
+        width: 120px;
+        height: 40px;
+        cursor: pointer;
+        margin: auto;
+        height: 0px;
+        /*margin-bottom: 0px;*/
+        margin-top: 20px;
+      }
+      th, td {
+        border: 1px solid black;
+        width: 120px;
+        height: 40px;
+        cursor: pointer;
+      }
+      .cell {
+        min-width: 40px;
+      }
+      .cell button {
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+      }
+      body {
+        width: 400px;
+        /*border: 1px solid black;*/
+        text-align: center;
+        height: auto;
+        margin: auto;
+        background-color: #FBFAAB;
+        margin-top: 100px;
+      }
+      .turnIsNow {
+        color: green;
+        font-weight: 900;
+      }
+      .nextTurn {
+        color: red;
+      }
+      #score {
+        display: inline-flex;
+      }
+      .mostWins {
+        color: green;
+        font-weight: 900;
+      }
+      .lessWins {
+        color: red;
+        font-weight: 900;
+      }
+      .equalWins {
+        color: blue;
+        font-weight: 900;
+      }
+      #player1, #player2, #startButton {
+        background-color: #C1FA83;
+        border-radius: 12px;
+      }
+      h1{
+        font-family: "Comic Sans MS";
+        color: #161AF2;
+        text-decoration: underline;
+      }
+    </style>
+    <title>Game X and O</title>
+  </head>
+  <body>
+    <h1>Game X and O</h1>
+    <br>
+      <div>
+        <form>
+          <input  type="button" value="Player 1 (X)"
+              onclick="gameModule.enterNamePlayer(1)" id="player1">
+
+          <input  type="button" value="Player 2 (O)"
+              onclick="gameModule.enterNamePlayer(2)" id="player2">
+        </form>
+        <br>
+        <div id="score"></div>
+      </div>
+      <br>
+      <div class="">
+        <button id="startButton" type="button" onclick="gameModule.startGame()">Start Game!</button>
+        <br><br>
+          <table id="content">
+          </table>
+      </div>
+  </body>
+</html>
